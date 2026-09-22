@@ -1,0 +1,7 @@
+<div class="map-shell">
+  <div #mapContainer class="map-container"></div>
+
+  <button class="draw-route-btn" [class.active]="isDrawMode" (click)="toggleDrawMode()">
+    {{ isDrawMode ? 'Click & drag on the map…' : 'Draw route' }}
+  </button>
+</div>

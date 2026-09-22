@@ -1,0 +1,29 @@
+<div class="app-shell">
+  <header class="app-header">
+    <button class="reset-route-btn" (click)="resetRoute()">
+      Reset route
+    </button>
+    <button class="sim-density-btn" (click)="toggleSimDensity()">
+      {{ showSimDensity ? 'Hide SIM density' : 'Show SIM density' }}
+    </button>
+  </header>
+
+  <app-alert-banner
+    [visible]="!!detection?.alert"
+    [maxCount]="detection?.maxCount ?? 0"
+    [threshold]="detection?.threshold ?? 0"
+    (generateAlternative)="generateAlternativeRoute()"
+  ></app-alert-banner>
+
+  <main class="map-wrapper">
+    <app-map
+      [route]="route"
+      [simZones]="simZones"
+      [showSimDensity]="showSimDensity"
+      [dronePosition]="telemetry?.position ?? null"
+      (routeDrawn)="onRouteDrawn($event)"
+    ></app-map>
+  </main>
+
+  <app-telemetry-panel [telemetry]="telemetry"></app-telemetry-panel>
+</div>

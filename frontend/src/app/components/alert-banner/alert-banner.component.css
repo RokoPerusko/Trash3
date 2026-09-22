@@ -1,0 +1,32 @@
+.alert-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: #fff1f1;
+  color: #a40e26;
+  border-bottom: 1px solid #d1242f;
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.text {
+  flex: 1;
+}
+
+.alt-route-btn {
+  background: #f85149;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.alt-route-btn:hover {
+  background: #ff6a6a;
+}

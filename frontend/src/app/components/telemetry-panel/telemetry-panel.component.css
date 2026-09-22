@@ -1,0 +1,46 @@
+.telemetry-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  padding: 16px 20px;
+  background: #ffffff;
+  color: #0b3d91;
+  border-top: 1px solid #dce6f5;
+}
+
+.telemetry-panel.loading {
+  display: block;
+  color: #6b87b0;
+  text-align: center;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b87b0;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0b3d91;
+}
+
+.value.status.in_flight {
+  color: #1a9c4a;
+}
+
+.value.status.hovering {
+  color: #b9770e;
+}
+
+.value.status.returning {
+  color: #d1242f;
+}

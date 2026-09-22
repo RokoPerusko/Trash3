@@ -1,0 +1,52 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: #f4f8fd;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #ffffff;
+  color: #0b3d91;
+  border-bottom: 1px solid #dce6f5;
+  box-shadow: 0 1px 3px rgba(31, 111, 235, 0.08);
+}
+
+.reset-route-btn {
+  background: #eaf2ff;
+  color: #1f6feb;
+  border: 1px solid #c6dcfb;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reset-route-btn:hover {
+  background: #dcebff;
+}
+
+.sim-density-btn {
+  background: #1f6feb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sim-density-btn:hover {
+  background: #388bfd;
+}
+
+.map-wrapper {
+  flex: 1;
+  min-height: 0;
+}

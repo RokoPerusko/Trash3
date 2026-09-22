@@ -1,0 +1,33 @@
+<div class="telemetry-panel" *ngIf="telemetry; else loading">
+  <div class="metric">
+    <span class="label">Battery</span>
+    <span class="value">{{ telemetry.battery | number: '1.0-0' }}%</span>
+  </div>
+  <div class="metric">
+    <span class="label">Altitude</span>
+    <span class="value">{{ telemetry.altitude | number: '1.0-0' }} m</span>
+  </div>
+  <div class="metric">
+    <span class="label">Speed</span>
+    <span class="value">{{ telemetry.speed | number: '1.1-1' }} km/h</span>
+  </div>
+  <div class="metric">
+    <span class="label">GPS Position</span>
+    <span class="value">{{ telemetry.position.lat | number: '1.5-5' }}, {{ telemetry.position.lng | number: '1.5-5' }}</span>
+  </div>
+  <div class="metric">
+    <span class="label">Signal</span>
+    <span class="value">{{ telemetry.signalStrength | number: '1.0-0' }}%</span>
+  </div>
+  <div class="metric">
+    <span class="label">Status</span>
+    <span class="value status" [class]="telemetry.status">{{ statusLabel }}</span>
+  </div>
+  <div class="metric">
+    <span class="label">Temperature</span>
+    <span class="value">{{ telemetry.temperature | number: '1.1-1' }}°C</span>
+  </div>
+</div>
+<ng-template #loading>
+  <div class="telemetry-panel loading">Connecting to telemetry...</div>
+</ng-template>

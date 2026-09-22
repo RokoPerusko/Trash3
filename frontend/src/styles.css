@@ -1,0 +1,10 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.drone-icon {
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+}

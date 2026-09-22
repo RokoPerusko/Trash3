@@ -1,0 +1,10 @@
+<div class="alert-banner" *ngIf="visible">
+  <span class="icon">⚠️</span>
+  <span class="text">
+    High SIM card density detected on the flight route
+    ({{ maxCount }} / threshold {{ threshold }})
+  </span>
+  <button class="alt-route-btn" (click)="generateAlternative.emit()">
+    Generate alternative route
+  </button>
+</div>
